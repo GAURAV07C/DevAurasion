@@ -1,11 +1,14 @@
-import NavBar from "@/components/NavBar";
+// import Footer from "@/components/Footer";
+// import NavBar from "@/components/NavBar";
 import Welcome from "@/components/Welcome";
 
 export default function Home() {
   return (
-   <div>
-    <NavBar />
+   <div className="w-screen h-screen">
+    {/* <NavBar /> */}
     <Welcome />
+
+    {/* <Footer /> */}
    </div>
     
   );

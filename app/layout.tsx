@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from "@/components/Footer";
+import NavBar from "@/components/NavBar";
 // import NavBar from "@/components/NavBar";
 
 const geistSans = localFont({
@@ -29,15 +31,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <head>
-          {/* <NavBar /> */}
-        </head>
-        <main>
+        
+        <header>
+          <NavBar />
+        </header>
+        <main className=" overflow-x-hidden">
 
         {children}
         </main>
         <footer>
-
+          <Footer />
         </footer>
       </body>
     </html>
