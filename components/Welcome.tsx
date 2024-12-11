@@ -20,7 +20,9 @@ const Welcome = () => {
             </button>
           </div>
         </div>
+        <div className="mt-40"></div>
       </div>
+      
     </div>
   );
 };
