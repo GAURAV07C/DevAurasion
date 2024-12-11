@@ -1,11 +1,11 @@
 import React from "react";
-
+import { FaDribbble, FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="w-full h-auto bg-[#101828] py-10 text-white">
-      <div className="flex flex-col items-center justify-center gap-12">
+      <div className="flex flex-col items-center justify-center gap-12 ">
         {/* Main Footer Section */}
-        <div className="w-11/12 mx-auto">
+        <div className="w-11/12 mx-auto mt-7">
           <div className="px-9">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Column 1 */}
@@ -16,43 +16,60 @@ const Footer = () => {
                 </p>
               </div>
               {/* Column 2 */}
-              <div className="border border-gray-600 p-4">
-                <h3 className="text-lg font-bold mb-4">Resources</h3>
+              <div className=" ">
+                <h3 className="text-[#98A2B3] text-sm font-semibold leading-5 mb-4">company</h3>
+                
                 <ul className="space-y-2">
                   <li>
-                    <a href="#" className="text-gray-400 hover:text-white">
-                      About Us
+                    <a href="#" className="text- hover:text-white text-[#EAECf0] text-sm font-medium leading-6   ">
+                      Home
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-gray-400 hover:text-white">
-                      Services
+                    <a href="#" className="text- hover:text-white text-[#EAECf0] text-sm font-medium leading-6   ">
+                      Blogs
                     </a>
                   </li>
+                  <li className="flex">
+                    <a href="#" className="text-[#98A2B3] hover:text-white">
+                      Events
+                    </a>
+                    <div className="bg-[#F2F4F7] px-2 py-0.5 gap-1 ml-1 rounded-2xl text-black">
+
+                    <p className="font-normal text-sm text-center" >New</p>
+                    </div>
+                  </li>
                   <li>
-                    <a href="#" className="text-gray-400 hover:text-white">
-                      Careers
+                    <a href="#" className="text- hover:text-white text-[#EAECf0] text-sm font-medium leading-6   ">
+                      Contact
                     </a>
                   </li>
                 </ul>
               </div>
               {/* Column 3 */}
-              <div className="border border-gray-600 p-4">
-                <h3 className="text-lg font-bold mb-4">Contact</h3>
+              <div className=" ">
+                <h3 className="text-[#98A2B3] text-sm font-semibold leading-5 mb-4">Social</h3>
+                
                 <ul className="space-y-2">
                   <li>
-                    <a href="#" className="text-gray-400 hover:text-white">
-                      Support
+                    <a href="#" className="text- hover:text-white text-[#EAECf0] text-sm font-medium leading-6   ">
+                      Twitter
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-gray-400 hover:text-white">
-                      Help Center
+                    <a href="#" className="text- hover:text-white text-[#EAECf0] text-sm font-medium leading-6   ">
+                      Linkdlin
                     </a>
                   </li>
+                  <li >
+                    <a href="#" className="text-[#EAECF0] hover:text-white">
+                      Github
+                    </a>
+                    
+                  </li>
                   <li>
-                    <a href="#" className="text-gray-400 hover:text-white">
-                      Privacy Policy
+                    <a href="#" className="text- hover:text-white text-[#EAECf0] text-sm font-medium leading-6   ">
+                      Dribble
                     </a>
                   </li>
                 </ul>
@@ -62,8 +79,8 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom Section */}
-        <div className="w-11/12 mx-auto border-t border-gray-600 pt-4">
-          <div className="px-9">
+        <div className="w-11/12 mx-auto  pt-4">
+          <div className="px-9 mt-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Bottom Column 1 */}
               <div className="flex items-center justify-center sm:justify-start text-[#98A2B3]">
@@ -73,25 +90,28 @@ const Footer = () => {
               <div className="flex items-center justify-center sm:justify-end">
                 <div className="flex gap-4">
                   <a href="#" className="hover:text-white">
-                    Facebook
+                  <FaTwitter size={28} className="text-[#98A2B3]" />
                   </a>
                   <a href="#" className="hover:text-white">
-                    Twitter
+                  <FaLinkedin size={28} className="text-[#98A2B3]" />
                   </a>
                   <a href="#" className="hover:text-white">
-                    LinkedIn
+                   <FaFacebook size={28} className="text-[#98A2B3]" />
                   </a>
                   <a href="#" className="hover:text-white">
-                    Instagram
+                    
+                    
+                  <FaGithub size={28} className="text-[#98A2B3]" />
                   </a>
                   <a href="#" className="hover:text-white">
-                    YouTube
+                  <FaDribbble size={28} className="text-[#98A2B3]" />
                   </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div className="mt-32"></div>
       </div>
     </div>
   );
