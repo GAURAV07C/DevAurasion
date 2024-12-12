@@ -15,7 +15,7 @@ const AboutUs = () => {
         <div className="flex justify-between">
           <div>
             <Image
-              src={"./images/about.svg"}
+              src={"./images/aboutUs.svg"}
               alt="about"
               width={646}
               height={430.67}
