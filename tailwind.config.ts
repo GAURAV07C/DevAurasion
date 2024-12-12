@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from 'tailwindcss/defaultTheme';
 import plugin from 'tailwindcss/plugin';
+
 export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -12,6 +14,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        samarkan: ['Samarkan', ...defaultTheme.fontFamily.sans],
+      },
     },
   },
   plugins: [
@@ -20,14 +25,13 @@ export default {
         '.gradient-border': {
           border: '1px solid',
           borderImage: 'linear-gradient(139.06deg, #FF7B72 -8.3%, #FFFFFF 68.71%) 1',
-          borderRadius: '5px',  // Set border-radius here
+          borderRadius: '5px', // Configurable border-radius
         },
       };
-    
-      // Add the utilities with respect to Tailwind's prefix and important options
+
       addUtilities(newUtilities, {
-        respectPrefix: true,  // allows prefixing with Tailwind's custom prefixes
-        respectImportant: false, // Optional: ensures !important is respected
+        respectPrefix: true,
+        respectImportant: false,
       });
     }),
   ],

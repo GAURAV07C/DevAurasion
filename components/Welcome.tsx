@@ -6,7 +6,7 @@ const Welcome = () => {
       <div className=" flex flex-col items-center justify-center  ">
         <div className=" mt-28 flex flex-col items-center justify-center mx-auto">
           <div className="h-16 text-white text-5xl font-bold ">
-            Welcome to <span className="font-mono">DevAurasion</span> Community
+            Welcome to <span className="font-samarkan" >DevAurasion</span> Community
           </div>
           <div className="w-8/12 text-[#959DA5] font-normal text-xl leading-5 text-center ">
             &quot;Fuel Your Tech Journey: Explore Events, Workshops, and More
