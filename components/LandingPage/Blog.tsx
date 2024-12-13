@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import {  FaArrowRight } from "react-icons/fa";
 
 // Reusable BlogPost Component
 const BlogPost: React.FC<{
@@ -115,10 +116,10 @@ const Blog: React.FC = () => {
           >
             {/* Add your content here */}
 
-            <div className=" w-[52%] mx-auto flex h-full  flex-col items-center justify-center  ">
+            <div className=" w-[100%] mx-auto flex h-full  flex-col items-center justify-center  ">
               <div className="">
-                <p className="text-[#F17216] font-semibold text-sm leading-8">
-                Learn more
+                 <p className="text-[#F17216] font-semibold text-lg leading-8 text-center flex ">
+                Learn more <FaArrowRight className="mt-1.5 ml-1" /> 
                 </p>
               </div>
               <div>

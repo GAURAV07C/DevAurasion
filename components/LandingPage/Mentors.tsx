@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-import {mentors} from '@/data/mentor'
+import { mentors } from "@/data/mentor";
 
 const Mentors = () => {
   return (
@@ -12,11 +12,11 @@ const Mentors = () => {
         <div className="flex flex-col gap-4 items-center">
           <div className="w-full flex flex-col items-center justify-center">
             <p className="text-[#5D5A88] text-4xl font-bold text-center">
-            Introducing Our Mentors
+              Introducing Our Mentors
             </p>
             <p className="font-normal text-lg leading-7 text-[#9795B5] text-center px-4 py-2">
-            Behind every milestone we achieve is the unwavering support
-            of our mentors
+              Behind every milestone we achieve is the unwavering support of our
+              mentors
             </p>
           </div>
 
@@ -25,13 +25,14 @@ const Mentors = () => {
             {mentors.map((mentor, index) => (
               <div
                 key={index}
-                className="relative w-[387.97px] h-[387px] border-2 overflow-hidden group mx-auto" style={
-                                              {
-                                                backgroundImage: "url('./images/aboutUs.svg')",
-                                                backgroundSize: "cover",
-                                                backgroundRepeat:"no-repeat"
-                                              } as React.CSSProperties
-                                            }
+                className="relative w-[387.97px] h-[387px] border-2 overflow-hidden group mx-auto"
+                style={
+                  {
+                    backgroundImage: "url('./images/aboutUs.svg')",
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                  } as React.CSSProperties
+                }
               >
                 {/* Background Overlay */}
                 <div className="absolute inset-0  opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
@@ -50,16 +51,28 @@ const Mentors = () => {
                   </div>
                   <div className="flex text-[#8D8BA7] gap-4 justify-start items-start px-2 py-2">
                     <Link href={mentor.links.facebook} passHref>
-                      <FaFacebook size={28} className="cursor-pointer hover:text-blue-500" />
+                      <FaFacebook
+                        size={28}
+                        className="cursor-pointer hover:text-blue-500"
+                      />
                     </Link>
                     <Link href={mentor.links.twitter} passHref>
-                      <FaTwitter size={28} className="cursor-pointer hover:text-blue-400" />
+                      <FaTwitter
+                        size={28}
+                        className="cursor-pointer hover:text-blue-400"
+                      />
                     </Link>
                     <Link href={mentor.links.instagram} passHref>
-                      <FaInstagram size={28} className="cursor-pointer hover:text-pink-500" />
+                      <FaInstagram
+                        size={28}
+                        className="cursor-pointer hover:text-pink-500"
+                      />
                     </Link>
                     <Link href={mentor.links.linkedin} passHref>
-                      <FaLinkedin size={28} className="cursor-pointer hover:text-blue-600" />
+                      <FaLinkedin
+                        size={28}
+                        className="cursor-pointer hover:text-blue-600"
+                      />
                     </Link>
                   </div>
                 </div>

@@ -1,10 +1,11 @@
 
-import AboutUs from "@/components/AboutUs";
-import Blog from "@/components/Blog";
-import Mentors from "@/components/Mentors";
-import Offer from "@/components/Offer";
-import Team from "@/components/Team";
-import Welcome from "@/components/Welcome";
+import AboutUs from "@/components/LandingPage/AboutUs";
+import Blog from "@/components/LandingPage/Blog";
+import Mentors from "@/components/LandingPage/Mentors";
+import Offer from "@/components/LandingPage/Offer";
+import QnA from "@/components/LandingPage/QnA";
+import Team from "@/components/LandingPage/Team";
+import Welcome from "@/components/LandingPage/Welcome";
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
     <Team />
     <Mentors />
     <Blog />
+    <QnA />
+    
 
    </div>
     
