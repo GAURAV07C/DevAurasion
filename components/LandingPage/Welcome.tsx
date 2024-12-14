@@ -2,27 +2,23 @@ import React from "react";
 
 const Welcome = () => {
   return (
-    <div className="w-full  h-3/4 bg-[#1B1F23]">
-      <div className=" flex flex-col items-center justify-center  ">
-        <div className=" mt-28 flex flex-col items-center justify-center mx-auto">
-          <div className="h-16 text-white text-5xl font-bold ">
-            Welcome to <span className="font-samarkan" >DevAurasion</span> Community
-          </div>
-          <div className="w-8/12 text-[#959DA5] font-normal text-xl leading-5 text-center ">
-            &quot;Fuel Your Tech Journey: Explore Events, Workshops, and More
-            for Developers and Enthusiasts!&quot;
-          </div>
-          <div>
-            <button className="bg-[#FFC209] px-6 py-5 rounded-lg text-white gap-2 mt-6">
-              <p className="text-white font-semibold text-xl leading-7">
-                Join Our Community
-              </p>
-            </button>
-          </div>
-        </div>
-        <div className="mt-40"></div>
+    <div className="w-full h-screen bg-[#1B1F23] flex items-center justify-center">
+      <div className="flex flex-col items-center justify-center px-4 text-center">
+        {/* Heading */}
+        <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold mt-12">
+          Welcome to <span className="font-samarkan">DevAurasion</span> Community
+        </h1>
+
+        {/* Subheading */}
+        <p className="text-[#959DA5] font-normal text-lg sm:text-xl lg:text-2xl mt-4 leading-6 sm:leading-7 lg:leading-8 max-w-3xl">
+          &quot;Fuel Your Tech Journey: Explore Events, Workshops, and More for Developers and Enthusiasts!&quot;
+        </p>
+
+        {/* Button */}
+        <button className="bg-[#FFC209] px-6 py-3 sm:py-4 rounded-lg text-white mt-6 hover:bg-[#e6a908] transition">
+          <span className="font-semibold text-lg sm:text-xl leading-7">Join Our Community</span>
+        </button>
       </div>
-      
     </div>
   );
 };

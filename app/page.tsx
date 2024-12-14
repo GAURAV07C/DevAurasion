@@ -9,7 +9,7 @@ import Welcome from "@/components/LandingPage/Welcome";
 
 export default function Home() {
   return (
-   <div className="">
+   <div className=" overflow-x-hidden sm:overflow-x-hidden">
     <Welcome />
     <Offer />
     <AboutUs />

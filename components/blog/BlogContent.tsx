@@ -8,26 +8,33 @@ import { blogTypeData } from "@/data/blogTypeData";
 
 const BlogCard = () => {
   return (
-    <div className="mt-28">
+    <div className="mt-28 overflow-x-hidden">
       {/* Header Section */}
-      <div className="w-4/5 mx-auto flex justify-between items-center">
-        <p className="font-semibold text-4xl text-[#1B1F23] leading-7">
+      <section>
+
+     
+      <div className="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <p className="font-semibold text-2xl sm:text-3xl lg:text-4xl text-[#1B1F23] text-center md:text-left leading-7">
           Recent Articles
         </p>
-        <div className="flex gap-3">
+        <div className="flex gap-3 flex-wrap justify-center md:justify-start">
           {blogTypeData.map((blogType) => (
             <div
               key={blogType.id}
               className="bg-[#6A737D] rounded-full px-3 py-1 hover:text-white cursor-pointer"
             >
-              <p>{blogType.title}</p>
+              <p className="text-sm sm:text-base">{blogType.title}</p>
             </div>
           ))}
         </div>
       </div>
 
+      </section>
       {/* Card Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20 w-4/5 mx-auto">
+      <section>
+
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20 w-11/12 mx-auto">
         {blogCardData.map((blog) => (
           <Card className="w-full" key={blog.id}>
             <div className="relative w-full">
@@ -69,6 +76,8 @@ const BlogCard = () => {
           </Card>
         ))}
       </div>
+      </section>
+
     </div>
   );
 };

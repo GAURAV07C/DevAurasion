@@ -1,6 +1,7 @@
 export interface Mentor {
     name: string;
     role: string;
+    backgroundImage:string;
     links: {
       facebook: string;
       twitter: string;
@@ -13,6 +14,7 @@ export interface Mentor {
     {
       name: "Name",
       role: "role",
+      backgroundImage:'./images/aboutUs.svg',
       links: {
         facebook: "https://facebook.com/",
         twitter: "https://twitter.com/",
@@ -23,6 +25,7 @@ export interface Mentor {
     {
       name: "name",
       role: "role",
+      backgroundImage:'./images/aboutUs.svg',
       links: {
         facebook: "https://facebook.com/",
         twitter: "https://twitter.com/",
@@ -33,6 +36,7 @@ export interface Mentor {
     {
       name: "name",
       role: "role",
+      backgroundImage:'./images/aboutUs.svg',
       links: {
         facebook: "https://facebook.com/",
         twitter: "https://twitter.com/",

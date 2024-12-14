@@ -111,7 +111,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-32"></div>
+        <div className="mt-"></div>
       </div>
     </div>
   );
