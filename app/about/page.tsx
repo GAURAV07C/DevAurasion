@@ -8,10 +8,15 @@ import React from 'react'
 const page = () => {
   return (
     <div>
+      <div>
       <AboutHeader />
       <AboutVision />
+      <div className='mt-56'>
       <Team />
-      <Mentors />s
+      </div>
+      <Mentors />
+      </div>
+      
     </div>
   )
 }

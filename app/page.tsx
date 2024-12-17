@@ -5,6 +5,7 @@ import Mentors from "@/components/LandingPage/Mentors";
 import Offer from "@/components/LandingPage/Offer";
 import QnA from "@/components/LandingPage/QnA";
 import Team from "@/components/LandingPage/Team";
+// import Test from "@/components/LandingPage/Test";
 import Welcome from "@/components/LandingPage/Welcome";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
     <Team />
     <Mentors />
     <Blog />
+    {/* <Test /> */}
     <QnA />
     
 

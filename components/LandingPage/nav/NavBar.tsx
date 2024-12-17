@@ -12,6 +12,7 @@ import {
 
 // Navigation data
 import { navData } from "@/data/nav";
+import { Button } from "@/components/ui/button";
 
 const NavBar = () => {
   return (
@@ -65,7 +66,7 @@ const NavBar = () => {
                   for Developers and Enthusiasts!
                 </SheetDescription>
               </SheetHeader>
-              <div className="flex flex-col items-center gap-4 mt-6">
+              <div className="flex flex-col items-start  gap-4 mt-6">
                 {navData.map((nav) => (
                   <div key={nav.id} className="group relative ">
                     <SheetClose asChild>
@@ -80,6 +81,7 @@ const NavBar = () => {
                     <div className="h-0.5 bg-gradient-to-r from-[#79B8FF] to-[#BEF5CA] absolute bottom-0 left-0 w-0 group-hover:w-full transition-all duration-300 ease-out z-10"></div>
                   </div>
                 ))}
+                <Button className="bg-yellow-50 mt-11 text-black hover:text-richblack-25">Join Our Community</Button>
               </div>
             </SheetContent>
           </Sheet>

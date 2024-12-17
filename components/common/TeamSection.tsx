@@ -49,7 +49,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({
           {people.map((person, index) => (
             <Card
               key={index}
-              className="relative w-full sm:w-[95%] lg:w-[90%] mx-auto h-[350px] sm:h-[400px] lg:h-[450px] border-2 overflow-hidden group"
+              className="relative w-[300px] h-[300px] mx-auto border-2 overflow-hidden group"
               style={
                 {
                   backgroundImage: `url('${person.backgroundImage}')`,
@@ -60,7 +60,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({
               }
             >
               {/* Overlay */}
-              <div className="absolute inset-0  opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
 
               {/* Card Content */}
               <CardContent className="absolute inset-0 flex flex-col justify-end p-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">

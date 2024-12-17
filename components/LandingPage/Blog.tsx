@@ -4,29 +4,6 @@ import {  FaArrowRight } from "react-icons/fa";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
-// Reusable BlogPost Component
-const BlogPost: React.FC<{
-  date: string;
-  title: string;
-  description: string;
-  imageUrl: string;
-  imageWidth: number;
-  imageHeight: number;
-  flex: string;
-}> = ({ date, title, description, imageUrl, imageWidth, imageHeight, flex }) => (
-  <div className={`flex ${flex} gap-6 mt-6`}>
-    <div className="w-full sm:w-1/3">
-      <Image src={imageUrl} alt={title} width={imageWidth} height={imageHeight} 
-      className={`w-[${imageWidth}px] h-[${imageHeight}px]`}
-      />
-    </div>
-    <div className="flex flex-col w-2/3">
-      <p className="text-[#20B486] font-semibold text-sm">{date}</p>
-      <p className="font-semibold text-lg text-[#FFFFFF]">{title}</p>
-      <p className="font-normal text-sm text-[#BBC5D9]">{description}</p>
-    </div>
-  </div>
-);
 
 const Blog: React.FC = () => {
   return (
@@ -62,46 +39,96 @@ const Blog: React.FC = () => {
           </div>
         </div>
       </section>
+      
 
       {/* Blog Posts Section */}
-      <main className="w-full bg-[#1B1F23] py-8 -mt-2">
-        <div className="flex flex-col sm:flex-row justify-between px-8">
-          {/* Left Side Blog Posts */}
-          <div className="w-full sm:w-3/5">
-            <BlogPost
-              date="November 16, 2024"
-              title="Three Pillars of User Delight"
-              description="Delight can be experienced viscerally, behaviorally, and reflectively. A great design is..."
-              flex={'flex-row'}
-              imageUrl="./images/blog1.svg"
-              imageWidth={320}
-              imageHeight={200}
-            />
-            <BlogPost
-              date="November 16, 2024"
-              title="Three Pillars of User Delight"
-              description="Delight can be experienced viscerally, behaviorally, and reflectively. A great design is..."
-              flex={'flex-row'}
-              imageUrl="./images/blog2.svg"
-              imageWidth={320}
-              imageHeight={200}
-            />
-          </div>
-
-          {/* Right Side Blog Post */}
-          <div className="w-full sm:w-2/5 mt-8 sm:mt-0 ">
-            <BlogPost
-              date="November 16, 2024"
-              title="Three Pillars of User Delight"
-              description="Delight can be experienced viscerally, behaviorally, and reflectively. A great design is..."
-              flex={'flex-col'}
-              imageUrl="./images/blog3.svg"
-              imageWidth={230}
-              imageHeight={200}
-            />
-          </div>
-        </div>
-      </main>
+     <div className="w-full bg-[#1B1F23] h-auto min-h-screen flex items-center justify-center p-4">
+           <div className="w-full lg:w-[80%] flex flex-col lg:flex-row gap-4 mx-auto">
+             
+             {/* Left Side Content */}
+             <div className="w-full lg:w-1/2 flex flex-col gap-4 h-full">
+               {/* First Row */}
+               <div className="flex flex-col sm:flex-row lg:flex-row gap-4 flex-1">
+                 {/* Image */}
+                 <div className="w-full sm:w-1/2">
+                   <Image
+                     src={"./images/blog1.svg"}
+                     alt="blog1"
+                     width={640}
+                     height={400}
+                     className="object-cover w-full h-full"
+                   />
+                 </div>
+                 {/* Text Content */}
+                 <div className="w-full sm:w-1/2 flex flex-col justify-center gap-2 p-4">
+                   <p className="text-[#20B486] font-normal text-sm lg:text-base">
+                     November 16, 2024
+                   </p>
+                   <p className="font-semibold text-lg lg:text-xl text-white">
+                     Three Pillars of User Delight
+                   </p>
+                   <p className="font-normal text-sm lg:text-base text-[#BBC5D9]">
+                     Delight can be experienced viscerally, behaviourally, and
+                     reflectively. A great design is ...
+                   </p>
+                 </div>
+               </div>
+     
+               {/* Second Row */}
+               <div className="flex flex-col sm:flex-row lg:flex-row gap-4 flex-1">
+                 {/* Image */}
+                 <div className="w-full sm:w-1/2">
+                   <Image
+                     src={"./images/blog3.svg"}
+                     alt="blog3"
+                     width={640}
+                     height={400}
+                     className="object-cover w-full h-full"
+                   />
+                 </div>
+                 {/* Text Content */}
+                 <div className="w-full sm:w-1/2 flex flex-col justify-center gap-2 p-4">
+                   <p className="text-[#20B486] font-normal text-sm lg:text-base">
+                     September 24, 2024
+                   </p>
+                   <p className="font-semibold text-lg lg:text-xl text-white">
+                     UX Mapping Methods
+                   </p>
+                   <p className="font-normal text-sm lg:text-base text-[#BBC5D9]">
+                     Visual-design principles can be applied consistently throughout
+                     the process of creating a polished UX map...
+                   </p>
+                 </div>
+               </div>
+             </div>
+     
+             {/* Right Side Content */}
+             <div className="w-full lg:w-1/2 flex flex-col gap-4 h-full">
+               <div className="w-full h-full">
+                 <Image
+                   src={"./images/blog3.svg"}
+                   alt="blog3"
+                   width={640}
+                   height={400}
+                   className="object-cover w-full h-full"
+                 />
+               </div>
+               <div className="w-full flex flex-col justify-center gap-2 p-4 mt-4">
+                 <p className="text-[#20B486] font-normal text-sm lg:text-base mt-2">
+                   March 13, 2024
+                 </p>
+                 <p className="font-semibold text-lg lg:text-2xl text-white mt-3">
+                   Agile Development Projects and Usability
+                 </p>
+                 <p className="font-normal text-sm lg:text-base text-[#BBC5D9]">
+                   Agile methods aim to overcome usability barriers in traditional
+                   development, but post new threats to user experience quality.
+                 </p>
+               </div>
+             </div>
+           </div>
+         </div>
+       
 
       {/* Footer Section */}
       <section className="w-full">
