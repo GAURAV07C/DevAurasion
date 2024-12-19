@@ -64,7 +64,7 @@ const TeamSection: React.FC<TeamSectionProps> = ({
               <CardContent className="absolute inset-0 flex flex-col justify-end text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-2 border-red-600 pb-0"  >
                 <div className="">
                   <CardHeader className="text-start -mt-1">
-                    <CardTitle className="text-sm sm:text-sm lg:text-lg font-bold text-black
+                    <CardTitle className="text-sm sm:text-sm lg:text-lg font-bold text-white
                       
                      -mt-8">
                       {/* text-[#5D5A88] */}
@@ -72,13 +72,15 @@ const TeamSection: React.FC<TeamSectionProps> = ({
                     </CardTitle>
 
                     {/* Reduced the gap between name and role */}
-                    <CardDescription className="text-sm sm:text-base lg:text-lg font-bold text-[#8D8BA7] mt-2">
+                    {/* text-[#8D8BA7] */}
+                    <CardDescription className="text-sm sm:text-base lg:text-lg font-bold  mt-2 text-white">
                       {person.role}
                     </CardDescription>
                   </CardHeader>
 
                   {/* Social Media Links */}
-                  <CardFooter className="flex gap-4 -mt-6 text-[#8D8BA7]">
+                  {/* text-[#8D8BA7] */}
+                  <CardFooter className="flex text-white gap-4 -mt-6 ">
                     {person.links?.facebook && (
                       <Link href={person.links.facebook} passHref>
                         <FaFacebook

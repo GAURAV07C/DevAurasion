@@ -45,14 +45,14 @@ export const teams: Team[] = [
     },
   },
   {
-    name: "name",
-    role: "role",
-    backgroundImage: "./images/aboutUs.svg",
+    name: "Gaurav Kumar",
+    role: "Full Stack Developer",
+    backgroundImage: "./images/team/me.jpg",
     links: {
       facebook: "https://facebook.com/",
-      twitter: "https://twitter.com/",
+      twitter: "https://x.com/gaurav07c",
       instagram: "https://instagram.com/",
-      linkedin: "https://linkedin.com/in/",
+      linkedin: "https://www.linkedin.com/in/gaurav07c/",
     },
   },
   
