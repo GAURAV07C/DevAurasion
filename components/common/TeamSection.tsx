@@ -61,10 +61,13 @@ const TeamSection: React.FC<TeamSectionProps> = ({
               <div className="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
 
               {/* Card Content */}
-              <CardContent className="absolute inset-0 flex flex-col justify-end text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <CardContent className="absolute inset-0 flex flex-col justify-end text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 border-2 border-red-600 pb-0"  >
                 <div className="">
                   <CardHeader className="text-start -mt-1">
-                    <CardTitle className="text-lg sm:text-xl lg:text-2xl font-bold text-[#5D5A88] -mt-8">
+                    <CardTitle className="text-sm sm:text-sm lg:text-lg font-bold text-black
+                      
+                     -mt-8">
+                      {/* text-[#5D5A88] */}
                       {person.name}
                     </CardTitle>
 
