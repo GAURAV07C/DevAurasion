@@ -16,10 +16,10 @@ export const teams: Team[] = [
     role: "Founder",
     backgroundImage: "./images/team/Ganesh Chowdary Nune 2.svg",
     links: {
-      facebook: "https://facebook.com/",
-      twitter: "https://twitter.com/",
-      instagram: "https://instagram.com/",
-      linkedin: "https://linkedin.com/in/",
+      facebook: "https://www.facebook.com/thegcnspeaks",
+      twitter: "https://x.com/ganeshchowdaryn",
+      instagram: "https://www.instagram.com/thegcnspeaks",
+      linkedin: "https://www.linkedin.com/in/ganesh-chowdary-nune",
     },
   },
   {
@@ -27,10 +27,10 @@ export const teams: Team[] = [
     role: "president",
     backgroundImage: "./images/team/uday.svg",
     links: {
-      facebook: "https://facebook.com/",
-      twitter: "https://twitter.com/",
-      instagram: "https://instagram.com/",
-      linkedin: "https://linkedin.com/in/",
+      facebook: "https://www.facebook.com/udaygyndu",
+      twitter: "https://x.com/UdayGundu2",
+      instagram: "https://instagram.com/udaygundu",
+      linkedin: "https://www.linkedin.com/in/uday-gundu-4b8658268/",
     },
   },
   {
