@@ -24,9 +24,18 @@ const BlogFilter:React.FC<BlogFilterProps> = ({blogTypeData , category , setCate
           {blogTypeData.map((blogType:{id:number , title:string}) => (
 
 
-              <Button onClick={() => filterHandler(blogType.title)} className={`bg-[#6A737D] rounded-full px-3 py-1 hover:text-white cursor-pointer ${category === blogType.title ? ('bg-opacity-60 border-white'):('bg-opacity-40 border-transparent')}`} key={blogType.id}> <p className='text-sm sm:text-base'>{blogType.title}</p> 
-
-              </Button>
+<Button 
+onClick={() => filterHandler(blogType.title)} 
+className={`
+  rounded-full px-3 py-1 cursor-pointer 
+  ${category === blogType.title 
+    ? 'bg-[#6A737D]  border-white' 
+    : 'border-transparent'} 
+  `}
+key={blogType.id}
+>
+<p className='text-sm sm:text-base'>{blogType.title}</p>
+</Button>
 
             
           ))}

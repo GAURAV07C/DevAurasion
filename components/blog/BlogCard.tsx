@@ -24,7 +24,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ card }) => {
         />
       </div>
       <CardContent className="mt-2 px-4">
-        <Button className="w-16 h-8 bg-[#381E2C] text-sm font-semibold text-[#F3B2D5]">
+        <Button className="w-fit h-8 bg-[#381E2C] text-sm font-semibold text-[#F3B2D5]">
           {card.news}
         </Button>
       </CardContent>
