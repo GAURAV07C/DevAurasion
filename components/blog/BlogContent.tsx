@@ -1,85 +1,57 @@
-import React from "react";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import Image from "next/image";
-import { Button } from "../ui/button";
-import { blogCardData } from "@/data/blogCardData";
+'use client'
+import React, { useEffect, useState } from "react";
+import BlogFilter from "./BlogFilter";
+import BlogCards from "./BlogCards";
 import { blogTypeData } from "@/data/blogTypeData";
+import { blogCardData } from "@/data/blogCardData";
+import { BlogEntry } from "@/data/blogCardData";
+import Spinner from "./Spinner";
 
-const BlogCard = () => {
+
+const BlogContent = () => {
+  const [category, setCategory] = useState(blogTypeData[0].title);
+  const [loading, setLoading] = useState(true);
+  const [cards, setCards] = useState<BlogEntry[]>([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      setLoading(true);
+      try {
+        const output = blogCardData.data;
+        const allCards = Object.values(output).flat(); // Flatten all cards
+
+        // Filter cards based on the selected category
+        if (category === "All") {
+          setCards(allCards); // Show all cards if category is "All"
+        } else {
+          const filteredCards = output[category] || [];
+          setCards(filteredCards); // Filter cards based on category
+        }
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false); // Set loading to false once data is fetched
+      }
+    }
+
+    fetchData(); // Re-fetch data whenever the category changes
+  }, [category]); // Trigger effect whenever category changes
+
   return (
     <div className="mt-28 overflow-x-hidden">
       {/* Header Section */}
       <section>
-
-     
-      <div className="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        <p className="font-semibold text-2xl sm:text-3xl lg:text-4xl text-[#1B1F23] text-center md:text-left leading-7">
-          Recent Articles
-        </p>
-        <div className="flex gap-3 flex-wrap justify-center md:justify-start">
-          {blogTypeData.map((blogType) => (
-            <div
-              key={blogType.id}
-              className="bg-[#6A737D] rounded-full px-3 py-1 hover:text-white cursor-pointer"
-            >
-              <p className="text-sm sm:text-base">{blogType.title}</p>
-            </div>
-          ))}
+        <div className="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="font-semibold text-2xl sm:text-3xl lg:text-4xl text-[#1B1F23] text-center md:text-left leading-7">
+            Recent Articles
+          </p>
+          <BlogFilter blogTypeData={blogTypeData} category={category} setCategory={setCategory} />
         </div>
-      </div>
-
       </section>
       {/* Card Section */}
-      <section>
-
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20 w-11/12 mx-auto">
-        {blogCardData.map((blog) => (
-          <Card className="w-full" key={blog.id}>
-            <div className="relative w-full">
-              <Image
-                src={blog.image}
-                alt={blog.heading}
-                layout="responsive"
-                width={392}
-                height={220.5}
-                className="w-full h-auto rounded-t-lg object-cover"
-              />
-            </div>
-            <CardContent className="mt-2 px-4">
-              <Button className="w-16 h-8 bg-[#381E2C] text-sm font-semibold text-[#F3B2D5]">
-                {blog.news}
-              </Button>
-            </CardContent>
-            <CardHeader className="px-4 -mt-2">
-              <CardTitle className="font-semibold text-lg">{blog.heading}</CardTitle>
-            </CardHeader>
-            <CardContent className="px-4 mt-2">
-              <p className="text-sm text-[#7C7C86]">{blog.desc}</p>
-            </CardContent>
-            <CardFooter className="px-4">
-              <div className="flex justify-between items-center">
-                <div className="flex items-center gap-2">
-                  <Avatar className="w-6 h-6">
-                    <AvatarImage
-                      src={blog.authorImage || "/default-avatar.png"}
-                      alt={`${blog.authorName}'s avatar`}
-                    />
-                    <AvatarFallback>CN</AvatarFallback>
-                  </Avatar>
-                  <p className="text-xs font-semibold text-[#9C9EA5]">{blog.authorName}</p>
-                </div>
-                <p className="text-xs text-[#96969E]">{blog.date}</p>
-              </div>
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
-      </section>
-
+      {loading ? <Spinner /> : <BlogCards cards={cards} />}
     </div>
   );
 };
 
-export default BlogCard;
+export default BlogContent;

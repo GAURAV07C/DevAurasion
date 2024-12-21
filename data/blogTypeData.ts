@@ -7,24 +7,28 @@ export interface BlogTypeData {
 export const blogTypeData:BlogTypeData[] =[
     {
         id:1,
-        title:"Learn"
+        title:"All"
     },
     {
         id:2,
-        title:"Tools"
+        title:"Learn"
     },
     {
         id:3,
+        title:"Tools"
+    },
+    {
+        id:4,
         title:"Tech"
     },{
-        id:4,
+        id:5,
         title:"Jobs"
     },{
-        id:5,
+        id:6,
         title:"Inspiration"
     },
     {
-        id:6,
+        id:7,
         title:"News"
     }
 ]
