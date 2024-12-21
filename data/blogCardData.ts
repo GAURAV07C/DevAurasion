@@ -39,7 +39,7 @@ export const blogCardData: BlogData = {
         news: "Learning",
         heading: "How to Master JavaScript in 2024",
         desc: "A comprehensive guide to learning JavaScript from scratch.",
-        authorImage: "./images/author1.svg",
+        authorImage:'./images/card-avtar.svg',
         authorName: "Jane Doe",
         date: "10 Dec 2024"
       },
@@ -52,8 +52,8 @@ export const blogCardData: BlogData = {
         news: "Learning",
         heading: "Advanced React Patterns",
         desc: "Learn about advanced patterns in React for building scalable apps.",
-        authorImage: "./images/author2.svg",
-        authorName: "John Doe",
+        authorImage:'./images/card-avtar.svg'  ,
+       authorName: "John Doe",
         date: "15 Nov 2024"
       }
     ],
@@ -136,7 +136,7 @@ export const blogCardData: BlogData = {
         news: "Jobs",
         heading: "React Developer Position",
         desc: "Join our team as a React Developer and work on cutting-edge projects.",
-        authorImage: "./images/job-avtar.svg",
+        authorImage: "./images/card-avtar.svg",
         authorName: "Hiring Manager",
         date: "05 Dec 2024"
       },
@@ -149,7 +149,7 @@ export const blogCardData: BlogData = {
         news: "Jobs",
         heading: "Backend Developer Role",
         desc: "We are looking for a skilled Backend Developer to join our team.",
-        authorImage: "./images/job-avtar.svg",
+        authorImage: "./images/card-avtar.svg",
         authorName: "Hiring Manager",
         date: "12 Nov 2024"
       }
@@ -164,7 +164,7 @@ export const blogCardData: BlogData = {
         news: "Inspiration",
         heading: "Overcoming Challenges in Tech",
         desc: "How to stay motivated and overcome the obstacles in the tech industry.",
-        authorImage: "./images/inspiration-avtar.svg",
+        authorImage: "./images/card-avtar.svg",
         authorName: "Michael Scott",
         date: "25 Oct 2024"
       },
@@ -177,7 +177,7 @@ export const blogCardData: BlogData = {
         news: "Inspiration",
         heading: "The Power of Perseverance",
         desc: "Inspiration for developers to keep pushing forward through adversity.",
-        authorImage: "./images/inspiration-avtar.svg",
+        authorImage: "./images/card-avtar.svg",
         authorName: "Rachel Green",
         date: "30 Oct 2024"
       }
@@ -192,7 +192,7 @@ export const blogCardData: BlogData = {
         news: "News",
         heading: "Tech Industry News: Latest Updates",
         desc: "Stay up to date with the latest happenings in the tech world.",
-        authorImage: "./images/news-avtar.svg",
+        authorImage: "./images/card-avtar.svg",
         authorName: "Mark Zuckerberg",
         date: "01 Dec 2024"
       },
@@ -205,7 +205,7 @@ export const blogCardData: BlogData = {
         news: "News",
         heading: "New Tech Regulation Changes",
         desc: "Understanding the new tech regulations and how they affect the industry.",
-        authorImage: "./images/news-avtar.svg",
+        authorImage: "./images/card-avtar.svg",
         authorName: "Sheryl Sandberg",
         date: "10 Nov 2024"
       }
