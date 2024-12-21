@@ -4,15 +4,29 @@ import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { BlogEntry } from "@/data/blogCardData"; // Ensure this import
+import { FcLike, FcLikePlaceholder } from "react-icons/fc"; // Ensure the icons are imported
+import { toast } from "sonner"; // Importing the toast function from Sonner
 
 // Accept the 'card' prop in BlogCard component
 interface BlogCardProps {
   card: BlogEntry;
+  likedBlogs: string[]; // Array of liked blog IDs
+  setLikedBlogs: React.Dispatch<React.SetStateAction<string[]>>; // Function to update liked blogs
 }
 
-const BlogCard: React.FC<BlogCardProps> = ({ card }) => {
+const BlogCard: React.FC<BlogCardProps> = ({ card, likedBlogs, setLikedBlogs }) => {
+  const clickHandler = () => {
+    if (likedBlogs.includes(card.id.toString())) {
+      setLikedBlogs(likedBlogs.filter((id) => id !== card.id.toString()));
+      toast.error("You unliked the blog!"); // Display toast for unliking
+    } else {
+      setLikedBlogs([...likedBlogs, card.id.toString()]);
+      toast.success("You liked the blog!"); // Display toast for liking
+    }
+  };
+
   return (
-    <Card className="w-full" key={card.id}>
+    <Card className="mt-5 w-full" key={card.id}>
       <div className="relative w-full">
         <Image
           src={card.image.url}
@@ -22,6 +36,15 @@ const BlogCard: React.FC<BlogCardProps> = ({ card }) => {
           height={220.5}
           className="w-full h-auto rounded-t-lg object-cover"
         />
+        <div className="w-[40px] h-[40px] bg-white rounded-full absolute right-2 bottom-2 grid place-items-center">
+          <button onClick={clickHandler}>
+            {likedBlogs.includes(card.id.toString()) ? (
+              <FcLike fontSize={"1.8rem"} />
+            ) : (
+              <FcLikePlaceholder fontSize={"1.8rem"} />
+            )}
+          </button>
+        </div>
       </div>
       <CardContent className="mt-2 px-4">
         <Button className="w-fit h-8 bg-[#381E2C] text-sm font-semibold text-[#F3B2D5]">

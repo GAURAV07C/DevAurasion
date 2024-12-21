@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/LandingPage/Footer";
 import NavBar from "@/components/LandingPage/nav/NavBar";
+import { Toaster } from "sonner";
 // import NavBar from "@/components/NavBar";
 
 const geistSans = localFont({
@@ -36,7 +37,7 @@ export default function RootLayout({
           <NavBar />
         </header>
         <main className=" overflow-x-hidden">
-
+        <Toaster position="top-right" />
         {children}
         </main>
         <footer>
