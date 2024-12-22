@@ -5,7 +5,7 @@ import BlogCards from "./BlogCards";
 import { blogTypeData } from "@/data/blogTypeData";
 import { blogCardData } from "@/data/blogCardData";
 import { BlogEntry } from "@/data/blogCardData";
-import Spinner from "./Spinner";
+import Spinner from "../common/Spinner";
 
 
 const BlogContent = () => {

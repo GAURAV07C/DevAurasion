@@ -1,4 +1,4 @@
-import Spinner from "@/components/blog/Spinner";
+import Spinner from "@/components/common/Spinner";
 import React from "react";
 
 
