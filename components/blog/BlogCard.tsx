@@ -3,11 +3,10 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "../ui/card
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { BlogEntry } from "@/data/blogCardData"; // Ensure this import
-import { FcLike, FcLikePlaceholder } from "react-icons/fc"; // Ensure the icons are imported
-import { toast } from "sonner"; // Importing the toast function from Sonner
+import { BlogEntry } from "@/data/blogCardData"; 
+import { FcLike, FcLikePlaceholder } from "react-icons/fc"; 
+import { toast } from "sonner"; 
 
-// Accept the 'card' prop in BlogCard component
 interface BlogCardProps {
   card: BlogEntry;
   likedBlogs: string[]; // Array of liked blog IDs
