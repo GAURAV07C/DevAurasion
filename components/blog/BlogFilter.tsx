@@ -1,9 +1,9 @@
 import React from 'react'
 import { Button } from '../ui/button';
 
-
+import { BlogTypeData } from "@/data/blogTypeData";
 interface BlogFilterProps {
-  blogTypeData:{id:number , title:string}[];
+  blogTypeData:BlogTypeData[];
   category :string;
   setCategory: React.Dispatch<React.SetStateAction<string>>;
 }
